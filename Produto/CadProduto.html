@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>Produto</title>
+</head>
+<body>
+
+    <nav class="header">
+        <img id="logo" src="src/img/logo.png" alt="Logo">
+        <a href="#" class="name">A<span>lc</span>S<span>ys</span></a>
+        <ul class="nav-menu">
+            <li class="div-item"><a href="#hist">Sobre Nós</a></li>
+            <li class="div-item"><a href="#ctt">Contato</a></li>
+            <i class="bx bx-search-alt"></i>
+        </ul>
+        <button id="mobile_btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <!--<div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="side_item active">
+                    <a href="#cad">
+                       <i class="fa-brands fa-wpforms"></i> 
+                        <span class="item-description">
+                            Fornecedor
+                        </span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    <br><br>
+                    <div class="submenu-1">
+                        <ul>
+                            <li> <a href="#cad-fornecedor">Fornecedores</a></li>
+                            <li> <a href="#cad-produtos">Produtos</a></li>
+                        </ul>
+                    </div>
+                    </a>
+                </li>
+                <li class="side_item">
+                    <a href="#or">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="item-description">
+                            Cliente
+                        </span>
+                    </a>
+                </li>
+                <li class="side_item">
+                    <a href="#fp">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        <span class="item-description">
+                            Folha de Pagamento
+                        </span>
+                    </a>
+                </li>
+                <li class="side_item">
+                    <a href="#login">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="item-description">
+                            Sair
+                        </span>
+                        </a>
+                </li>
+
+
+            <li class="div-item"><a href="#hist">Sobre Nós</a></li>
+                <li class="div-item"><a href="#ctt">Contato</a></li>
+            </ul>-->
+        </div>
+    </nav>
+    <br><br>
+<form id="pessoa-form">
+    <div class="form-group">
+        <label for="codproduto">Codigo Produto:</label>
+        <input type="text" id="detail-codproduto" name="codproduto" readonly><br>
+    </div>
+    <div class="form-group">
+        <label for="produto">Descrição Produto:</label>
+        <input type="text" id="detail-produto" name="produto"><br>
+        <ul id="search-results" style="border: 0px solid #ccc; max-height: 200px; overflow-y: auto;"></ul>
+    </div>
+    <div class="form-group">
+        <label for="catproduto">Categoria:</label>
+        <input type="text" id="detail-categoria" name="categoria"><br>
+    </div>
+    <div class="form-row">
+    <div class="form-group">
+        <label for="codunidmedida">Unidade de Medida:</label>
+        <input type="text" id="detail-unidademedida" name="unidademedida"><br>
+    </div>
+    <div class="select-group">
+        <label for="aceitasimilar">Similar:</label>
+        <select id="detail-similar" name="Similar">
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+    </div>
+    </div>
+    <div class="select-group">
+        <label for="ativo">Produto Ativo:</label>
+        <select id="detail-ativo" name="ativo">
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+    </div>
+    
+        
+    </div>
+    </div>
+    <div class="form-buttons">
+        <button type="button" onclick="updateProduto()">Salvar Alterações</button>
+        <button type="button" onclick="insertProduto()">Salvar Cadastro</button>
+        <button type="button" onclick="deleteProduto()">Apagar cadastro</button>
+    </div>
+</form>
+    <br><br>
+    <nav id="sidebar">
+        <div id="sidebar_content">
+        <div id="user">
+            <img id="avatar" src="src/img/avatar.jpg" id="user_avatar" alt="Avatar" width="200px">
+            <p id="user_infos">
+                <span class="item-description">
+                    Cliente "X"
+                </span>
+                <span class="item-description">
+                    Cnpj: 0000123456.789
+                </span>
+            </p>
+        </div>
+        <ul id="side_items">
+            <li class="side_item active">
+                <a href="../Fornecedor/cadFornecedor.html">
+                   <i class="fa-brands fa-wpforms"></i>
+                    <span class="item-description active">
+                        Fornecedor
+                    </span>
+                    <!--<i class="fa-solid fa-chevron-down"></i>
+                    <br><br>
+                    <div class="submenu-1">
+                        <ul>
+                            <li> <a href="#cad-fornecedor">Fornecedores</a></li>
+                            <li> <a href="#cad-produtos">Produtos</a></li>
+                        </ul>
+                    </div>-->
+                </a>
+            </li>
+            <li class="side_item">
+                <a href="#or">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="item-description">
+                        Produto
+                    </span>
+                </a>
+            </li>
+            <!--<li class="side_item">
+                <a href="#fp">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                    <span class="item-description">
+                        Produto
+                    </span>
+                </a>
+            </li>-->
+           
+        </ul>
+        <button id="open_btn">
+            <i id="open_btn_icon" class="fa-solid fa-circle-chevron-right"></i>
+        </button>
+        </div>
+       <div id="logout">
+            <button id="logout_btn">
+                <a href="#login">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="item-description">
+                    Sair
+                </span>
+                </a>
+            </button>
+        </div>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="src/javascript/script.js"></script>
+    <footer>Direitos reservados @2024</footer>
+</body>
+</html>

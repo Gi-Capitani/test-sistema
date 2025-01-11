@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Teste</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h2>Cadastro de Pessoa</h2>
+        <form id="form">
+            <label for="codpessoa">Código Pessoa</label>
+            <input type="number" id="codpessoa" name="codpessoa" disabled>
+
+            <label for="razaosocial">Razão Social</label>
+            <input type="text" id="razaosocial" name="razaosocial" disabled>
+
+            <label for="nomefantasia">Nome Fantasia</label>
+            <input type="text" id="nomefantasia" name="nomefantasia" disabled>
+
+            <label for="cnpjcpf">CNPJ/CPF</label>
+            <input type="text" id="cnpjcpf" name="cnpjcpf" disabled>
+
+            <label for="inscestadual">Inscrição Estadual</label>
+            <input type="text" id="inscestadual" name="inscestadual" disabled>
+
+            <label for="logradouro">Logradouro</label>
+            <input type="text" id="logradouro" name="logradouro" disabled>
+
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" name="bairro" disabled>
+
+            <label for="complemento">Complemento</label>
+            <input type="text" id="complemento" name="complemento" disabled>
+
+            <label for="numero">Número</label>
+            <input type="number" id="numero" name="numero" disabled>
+
+            <label for="cep">CEP</label>
+            <input type="text" id="cep" name="cep" disabled>
+
+            <label for="codcidade">Código da Cidade</label>
+            <input type="number" id="codcidade" name="codcidade" disabled>
+
+            <label for="uf">UF</label>
+            <input type="text" id="uf" name="uf" disabled>
+
+            <label for="pais">País</label>
+            <input type="text" id="pais" name="pais" disabled>
+
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" disabled>
+
+            <label for="appmensagem">App Mensagem</label>
+            <input type="text" id="appmensagem" name="appmensagem" disabled>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" disabled>
+
+            <label for="codigocat">Código da Categoria</label>
+            <input type="number" id="codigocat" name="codigocat" disabled>
+        </form>
+    </div>
+    <div>
+        <button id="btnNovo" onclick="novo()">Novo</button>
+        <button id="btnSalvar" onclick="salvar()" disabled>Salvar</button>
+        <button id="btnCancelar" onclick="cancelar()" disabled>Cancelar</button>
+    </div>
+    <div id="searchResults"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

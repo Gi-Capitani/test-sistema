@@ -1,0 +1,362 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(45deg, rgb(243, 247, 247), rgb(112, 155, 240));
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para os campos de input */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="button"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+}
+
+form {
+    background-color: white;
+    padding: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    background: linear-gradient(45deg, rgb(243, 247, 247), rgb(112, 155, 240));
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    transition: all 0.5s;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 80px;
+}
+.header .logo-container {
+    display: flex;
+    flex-grow: 1;
+    gap: 1rem;
+}
+.header img {
+    width: 60px;
+    height: auto;
+}
+.header .name{
+    color: rgb(35, 170, 188);
+    font-size: 1.7rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.name span{
+    color: rgb(101, 158, 237);
+}
+.nav-menu{
+    gap: 30px;
+    margin-left: 70%;
+    justify-content: flex-end;
+}
+.header ul {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    right: 5rem;
+    gap: 4rem;
+    list-style: none;
+}
+.header ul li a{
+    text-decoration: none;
+    color: rgb(30, 70, 144);
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.header ul li a:hover{
+    color: rgb(91, 91, 241);
+}
+.header i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.navigation{
+    cursor: pointer;
+    display: none;
+}
+.navigation .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: black;
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.logo{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15%;
+    z-index: 1000;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#sidebar{
+    top: 36px;
+    margin: 65px auto 60px auto;
+    padding: 40px;
+    margin-left: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(35, 121, 188, 0.4);
+    height: 69vh;
+    border-radius: 0px 18px 18px 0px;
+    position: fixed;
+    transition: all .5s;
+    min-width: 80px;
+}
+#sidebar_content{
+    padding: 1px;
+    display: block;
+}
+#avatar{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+#user{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+#user_avatar{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+#user_infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.ul{
+    align-items: flex-end;
+}
+#side_items{
+    display: flex;
+    padding: 15px;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+    list-style: none;
+}
+.side_item{
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer;
+}
+.side_item.active a{
+    background-color: #4f46e5;
+    border-bottom: #ffe100;
+}
+.side_item:hover:not(.active), #logout_btn:hover{
+    background-color: #e3e9f7;
+}
+.side_item a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0a0a0a;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.side_item.active a{
+    color: #e3e9f7;
+}
+.side_item a i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+#logout{
+    margin-top: 12px; /* Garantir que o botão 'Sair' fique abaixo dos outros itens */
+    display: flex;
+    justify-content: center;
+    /*border-top: 1px solid #e3e9f7;
+    padding: 12px;*/
+}
+#logout_btn{
+    padding: 15px;
+    font-size: 15px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 10px;
+    text-align: start;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background-color: rgb(54, 172, 166);
+    box-shadow: 2px 2px 2px grey;
+}
+#logout_btn:hover{
+    background-color: rgb(65, 162, 162);
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+#logout_btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+#open_btn{
+    position: absolute;
+    top: 30px;
+    right: -9px;
+    border-color: #4f46e5;
+    color: #4f46e5;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+#open_btn_icon{
+    transition: transform .3s ease;
+}
+.open-sidebar #open_btn_icon {
+    transform: rotate(180deg);
+}
+.item-description{
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+    height: 0px;
+}
+#sidebar.open-sidebar{
+    min-width: 15%;
+    display: block;
+}
+#sidebar.open-sidebar .item-description{
+    width: 150px;
+    height: auto;
+}
+#sidebar.open-sidebar .side_item a{
+    justify-content: flex-start;
+    gap: 12px;
+}
+#mobile_btn{
+    position: absolute;
+    display: flex;
+    
+    justify-content: space-between;
+    right: 8rem;
+    gap: 4rem;
+    display: none;
+
+}
+#mobile_menu{
+    display: none;
+}
+
+
+#mobile_menu.open {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    gap: 12px; /* Adicionando um espaço entre os itens */
+}
+
+#mobile_menu .item-description {
+    display: none;
+}
+
+ Exibe o texto dos menus quando o menu hambúrguer é aberto 
+ #mobile_menu.open .item-description {
+    display: inline-block; /* Exibe o texto quando o menu é aberto */
+    font-size: 18px;
+    margin-left: 10px;
+    color: #fff;
+    transition: all 0.3s ease;
+    width: auto;
+    height: auto;
+}
+@media screen and (max-width: 1170px){
+    .div_menu,
+    .div-item,
+    .nav-menu,
+    #sidebar {
+        display: none;
+    }
+    #mobile_btn {
+        display: block;
+        border: none;
+        background-color: transparent;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    #mobile_menu.open-mobile_menu{
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        gap: 12px; /* Adicionando um espaço entre os itens */
+    }
+    #mobile_nav_list{
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 50px;
+    }
+    #mobile_nav_list .nav-item .logout_btn{
+        list-style: none;
+        text-align: center;
+    }
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(65, 162, 162);
+    font-size: 0.9rem;
+    padding: 1rem;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}

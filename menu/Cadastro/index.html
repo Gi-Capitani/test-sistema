@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>Menu</title>
+</head>
+<body>
+
+    <nav class="header">
+        <img id="logo" src="src/img/logo.png" alt="Logo">
+        <a href="#" class="name">A<span>lc</span>S<span>ys</span></a>
+        <ul class="nav-menu">
+            <li class="div-item"><a href="#hist">Sobre Nós</a></li>
+            <li class="div-item"><a href="#ctt">Contato</a></li>
+            <i class="bx bx-search-alt"></i>
+        </ul>
+        <button id="mobile_btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="side_item active">
+                    <a href="#cad">
+                       <i class="fa-brands fa-wpforms"></i> 
+                        <span class="item-description">
+                            Cadastros
+                        </span>
+                    </a>
+                </li>
+                <li class="side_item">
+                    <a href="#or">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="item-description">
+                            Orçamento
+                        </span>
+                    </a>
+                </li>
+                <li class="side_item">
+                    <a href="#fp">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        <span class="item-description">
+                            Folha de Pagamento
+                        </span>
+                    </a>
+                </li>
+                <li class="side_item">
+                    <a href="#login">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span class="item-description">
+                            Sair
+                        </span>
+                        </a>
+                </li>
+
+
+            <li class="div-item"><a href="#hist">Sobre Nós</a></li>
+                <li class="div-item"><a href="#ctt">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+    <br><br>
+<form id="pessoa-form">
+    <div class="form-group">
+        <label for="codpessoa">Nº de Cadastro:</label>
+        <input type="text" id="detail-codpessoa" name="codpessoa" readonly>
+    </div>
+    <div class="form-group">
+        <label for="razaosocial">Razão Social:</label>
+        <input type="text" id="detail-razaosocial" name="razaosocial">
+    </div>
+    <div class="form-group">
+        <label for="nomefantasia">Nome Fantasia:</label>
+        <input type="text" id="detail-nomefantasia" name="nomefantasia">
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="cnpjcpf">CNPJ/CPF:</label>
+            <input type="text" id="detail-cnpjcpf" name="cnpjcpf">
+        </div>
+        <div class="form-group">
+            <label for="inscricaoestadual">Inscrição Estadual:</label>
+            <input type="text" id="detail-inscricaoestadual" name="inscricaoestadual">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="logradouro">Logradouro:</label>
+            <input type="text" id="detail-logradouro" name="logradouro">
+        </div>
+        <div class="form-group">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="detail-bairro" name="bairro">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="complemento">Complemento:</label>
+            <input type="text" id="detail-complemento" name="complemento">
+        </div>
+        <div class="form-group">
+            <label for="numero">Número:</label>
+            <input type="number" id="detail-numero" name="numero">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="cep">CEP:</label>
+            <input type="text" id="detail-cep" name="cep">
+        </div>
+        <div class="form-group">
+            <label for="codcidade">Cidade:</label>
+            <input type="number" id="detail-cidade" name="codcidade">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="uf">UF:</label>
+            <input type="text" id="detail-uf" name="uf">
+        </div>
+        <div class="form-group">
+            <label for="pais">País:</label>
+            <input type="text" id="detail-pais" name="pais">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="detail-telefone" name="telefone">
+        </div>
+        <div class="form-group">
+            <label for="appmensagem">App Mensagem:</label>
+            <input type="text" id="detail-appmensagem" name="appmensagem">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="detail-email" name="email">
+    </div>
+    <div class="form-group">
+        <label for="categoria">Categoria:</label>
+        <input type="number" id="detail-categoria" name="categoria">
+    </div>
+    <div class="form-buttons">
+        <button type="button" onclick="updatePessoa()">Salvar Alterações</button>
+        <button type="button" onclick="insertPessoa()">Salvar Cadastro</button>
+        <button type="button" onclick="deletePessoa()">Apagar Cadastro</button>
+    </div>
+</form>
+    <br><br>
+    <nav id="sidebar">
+        <div id="sidebar_content">
+        <div id="user">
+            <img id="avatar" src="src/img/avatar.jpg" id="user_avatar" alt="Avatar" width="200px">
+            <p id="user_infos">
+                <span class="item-description">
+                    Cliente "X"
+                </span>
+                <span class="item-description">
+                    Cnpj: 0000123456.789
+                </span>
+            </p>
+        </div>
+        <ul id="side_items">
+            <li class="side_item active">
+                <a href="#cad">
+                   <i class="fa-brands fa-wpforms"></i>
+                    <span class="item-description">
+                        Cadastros
+                    </span>
+                </a>
+            </li>
+            <li class="side_item">
+                <a href="#or">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="item-description">
+                        Orçamento
+                    </span>
+                </a>
+            </li>
+            <li class="side_item">
+                <a href="#fp">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                    <span class="item-description">
+                        Folha de Pagamento
+                    </span>
+                </a>
+            </li>
+           
+        </ul>
+        <button id="open_btn">
+            <i id="open_btn_icon" class="fa-solid fa-circle-chevron-right"></i>
+        </button>
+        </div>
+       <div id="logout">
+            <button id="logout_btn">
+                <a href="#login">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span class="item-description">
+                    Sair
+                </span>
+                </a>
+            </button>
+        </div>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="src/javascript/script.js"></script>
+    <footer>Direitos reservados @2024</footer>
+</body>
+</html>
